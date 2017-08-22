@@ -1,5 +1,7 @@
 # Getting started
 
+this is one of the things we are working on it.
+
 ## How to Build
 
 The generated SDK relies on [Node Package Manager](https://www.npmjs.com/) (NPM) being available to resolve dependencies. If you don't already have NPM installed, please go ahead and follow instructions to install NPM from [here](https://nodejs.org/en/download/).
@@ -11,7 +13,7 @@ To check if node and npm have been successfully installed, write the following c
 * `node --version`
 * `npm -version`
 
-![Version Check](https://apidocs.io/illustration/nodejs?step=versionCheck&workspaceFolder=BibcodeQuery-Node)
+![Version Check](https://apidocs.io/illustration/nodejs?step=versionCheck&workspaceFolder=CalculatorService-Node)
 
 Now use npm to resolve all dependencies by running the following command in the root directory (of the SDK folder):
 
@@ -19,13 +21,13 @@ Now use npm to resolve all dependencies by running the following command in the 
 npm install
 ```
 
-![Resolve Dependencies](https://apidocs.io/illustration/nodejs?step=resolveDependency1&workspaceFolder=BibcodeQuery-Node)
+![Resolve Dependencies](https://apidocs.io/illustration/nodejs?step=resolveDependency1&workspaceFolder=CalculatorService-Node)
 
 ![Resolve Dependencies](https://apidocs.io/illustration/nodejs?step=resolveDependency2)
 
 This will install all dependencies in the `node_modules` folder.
 
-Once dependencies are resolved, you will need to move the folder `BibcodeQueryLib ` in to your `node_modules` folder.
+Once dependencies are resolved, you will need to move the folder `CalculatorServiceLib ` in to your `node_modules` folder.
 
 ## How to Use
 
@@ -40,7 +42,7 @@ Click on `File` and select `Open Folder`.
 
 Select the folder of your SDK and click on `Select Folder` to open it up in Sublime Text. The folder will become visible in the bar on the left.
 
-![Open Project](https://apidocs.io/illustration/nodejs?step=openProject&workspaceFolder=BibcodeQuery-Node)
+![Open Project](https://apidocs.io/illustration/nodejs?step=openProject&workspaceFolder=CalculatorService-Node)
 
 ### 2. Creating a Test File
 
@@ -52,9 +54,9 @@ var lib = require('lib');
 
 Save changes.
 
-![Create new file](https://apidocs.io/illustration/nodejs?step=createNewFile&workspaceFolder=BibcodeQuery-Node)
+![Create new file](https://apidocs.io/illustration/nodejs?step=createNewFile&workspaceFolder=CalculatorService-Node)
 
-![Save new file](https://apidocs.io/illustration/nodejs?step=saveNewFile&workspaceFolder=BibcodeQuery-Node)
+![Save new file](https://apidocs.io/illustration/nodejs?step=saveNewFile&workspaceFolder=CalculatorService-Node)
 
 ### 3. Running The Test File
 
@@ -64,7 +66,7 @@ To run the `index.js` file, open up the command prompt and navigate to the Path 
 node index.js
 ```
 
-![Run file](https://apidocs.io/illustration/nodejs?step=runProject&workspaceFolder=BibcodeQuery-Node)
+![Run file](https://apidocs.io/illustration/nodejs?step=runProject&workspaceFolder=CalculatorService-Node)
 
 
 ## How to Test
@@ -85,11 +87,11 @@ Tests can be run in a number of ways:
 ### Method 3 (Run specific controller's tests)
 
 1. Navigate to the `../test/Controllers/` directory from command prompt.
-2. Type `mocha  BibcodeQueryController`  to run all the tests in that controller file.
+2. Type `mocha  CalculatorServiceController`  to run all the tests in that controller file.
 
 > To increase mocha's default timeout, you can change the `TEST_TIMEOUT` parameter's value in `TestBootstrap.js`.
 
-![Run Tests](https://apidocs.io/illustration/nodejs?step=runTests&controllerName=BibcodeQueryController)
+![Run Tests](https://apidocs.io/illustration/nodejs?step=runTests&controllerName=CalculatorServiceController)
 
 ## Initialization
 
@@ -109,19 +111,19 @@ const lib = require('lib');
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [BibcodeQueryBindingController](#bibcode_query_binding_controller)
+* [DefaultBindingICalculatorController](#default_binding_i_calculator_controller)
 
-## <a name="bibcode_query_binding_controller"></a>![Class: ](https://apidocs.io/img/class.png ".BibcodeQueryBindingController") BibcodeQueryBindingController
+## <a name="default_binding_i_calculator_controller"></a>![Class: ](https://apidocs.io/img/class.png ".DefaultBindingICalculatorController") DefaultBindingICalculatorController
 
 ### Get singleton instance
 
-The singleton instance of the ``` BibcodeQueryBindingController ``` class can be accessed from the API Client.
+The singleton instance of the ``` DefaultBindingICalculatorController ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.BibcodeQueryBindingController;
+var controller = lib.DefaultBindingICalculatorController;
 ```
 
-### <a name="get_bibcode"></a>![Method: ](https://apidocs.io/img/method.png ".BibcodeQueryBindingController.getBibcode") getBibcode
+### <a name="add"></a>![Method: ](https://apidocs.io/img/method.png ".DefaultBindingICalculatorController.add") add
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -129,15 +131,13 @@ var controller = lib.BibcodeQueryBindingController;
 
 
 ```javascript
-function getBibcode(bibcode, dbKey, dataType, callback)
+function add(body, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| bibcode |  ``` Required ```  | TODO: Add a parameter description |
-| dbKey |  ``` Required ```  | TODO: Add a parameter description |
-| dataType |  ``` Required ```  | TODO: Add a parameter description |
+| body |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -145,11 +145,41 @@ function getBibcode(bibcode, dbKey, dataType, callback)
 
 ```javascript
 
-    var bibcode = 'bibcode';
-    var dbKey = db_key;
-    var dataType = data_type;
+    var body = new ICalculatorAddInputMessage({"key":"value"});
 
-    controller.getBibcode(bibcode, dbKey, dataType, function(error, response, context) {
+    controller.add(body, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="create_subtract"></a>![Method: ](https://apidocs.io/img/method.png ".DefaultBindingICalculatorController.createSubtract") createSubtract
+
+> *Tags:*  ``` Skips Authentication ``` 
+
+> TODO: Add a method description
+
+
+```javascript
+function createSubtract(body, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| body |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var body = new ICalculatorSubtractInputMessage({"key":"value"});
+
+    controller.createSubtract(body, function(error, response, context) {
 
     
     });

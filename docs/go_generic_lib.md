@@ -1,5 +1,7 @@
 # Getting started
 
+this is one of the things we are working on it.
+
 ## How to Build
 
 
@@ -29,15 +31,15 @@ Now follow the steps mentioned below to build your SDK:
 
 3. In ```Select root directory```, provide path to the unzipped archive for the generated code. Once the path is set and the Project becomes visible under ```Projects``` click ```Finish```
 
-![Importing SDK into Eclipse - Step 3](https://apidocs.io/illustration/go?step=import2&workspaceFolder=BibcodeQuery-GoLang&projectName=bibcodequery_lib)
+![Importing SDK into Eclipse - Step 3](https://apidocs.io/illustration/go?step=import2&workspaceFolder=CalculatorService-GoLang&projectName=calculatorservice_lib)
 
 4. The Go library will be imported and its files will be visible in the Project Explorer
 
-![Importing SDK into Eclipse - Step 4](https://apidocs.io/illustration/go?step=import3&projectName=bibcodequery_lib)
+![Importing SDK into Eclipse - Step 4](https://apidocs.io/illustration/go?step=import3&projectName=calculatorservice_lib)
 
 ## How to Use
 
-The following section explains how to use the BibcodequeryLib library in a new project.
+The following section explains how to use the CalculatorserviceLib library in a new project.
 
 ### 1. Add a new Test Project
 
@@ -51,19 +53,19 @@ Name the Project as ```Test``` and click ```Finish```
 
 Create a new directory in the ```src``` directory of this project
 
-![Create a new Maven Project - Step 2](https://apidocs.io/illustration/go?step=createNewProject2&projectName=bibcodequery_lib)
+![Create a new Maven Project - Step 2](https://apidocs.io/illustration/go?step=createNewProject2&projectName=calculatorservice_lib)
 
 Name it ```test.com```
 
-![Create a new Maven Project - Step 3](https://apidocs.io/illustration/go?step=createNewProject3&projectName=bibcodequery_lib)
+![Create a new Maven Project - Step 3](https://apidocs.io/illustration/go?step=createNewProject3&projectName=calculatorservice_lib)
 
 Now create a new file inside ```src/test.com```
 
-![Create a new Maven Project - Step 4](https://apidocs.io/illustration/go?step=createNewProject4&projectName=bibcodequery_lib)
+![Create a new Maven Project - Step 4](https://apidocs.io/illustration/go?step=createNewProject4&projectName=calculatorservice_lib)
 
 Name it ```testsdk.go```
 
-![Create a new Maven Project - Step 5](https://apidocs.io/illustration/go?step=createNewProject5&projectName=bibcodequery_lib)
+![Create a new Maven Project - Step 5](https://apidocs.io/illustration/go?step=createNewProject5&projectName=calculatorservice_lib)
 
 In this Go file, you can start adding code to initialize the client library. Sample code to initialize the client library and using its methods is given in the subsequent sections.
 
@@ -73,7 +75,7 @@ You need to import your generated library in this project in order to make use o
 
 Right click on the project name and click on ```Properties```
 
-![Adding dependency to the client library - Step 1](https://apidocs.io/illustration/go?step=testProject0&projectName=bibcodequery_lib)
+![Adding dependency to the client library - Step 1](https://apidocs.io/illustration/go?step=testProject0&projectName=calculatorservice_lib)
 
 Choose ```Go Compiler``` from the side menu. Check ```Use project specific settings``` and uncheck ```Use same value as the GOPATH environment variable.```. By default, the GOPATH value from the environment variables will be visible in ```Eclipse GOPATH```. Do not remove this as this points to the unirest dependency.
 
@@ -81,7 +83,7 @@ Choose ```Go Compiler``` from the side menu. Check ```Use project specific setti
 
 Append the library path to this GOPATH
 
-![Adding dependency to the client library - Step 3](https://apidocs.io/illustration/go?step=testProject2&workspaceFolder=BibcodeQuery-GoLang)
+![Adding dependency to the client library - Step 3](https://apidocs.io/illustration/go?step=testProject2&workspaceFolder=CalculatorService-GoLang)
 
 Once the path is appended, click on ```OK```
 
@@ -89,31 +91,31 @@ Once the path is appended, click on ```OK```
 
 Right click on the project name and click on ```Build Project```
 
-![Build Project](https://apidocs.io/illustration/go?step=buildProject&projectName=bibcodequery_lib)
+![Build Project](https://apidocs.io/illustration/go?step=buildProject&projectName=calculatorservice_lib)
 
 ### 4. Run the Test Project
 
 If the build is successful, right click on your Go file and click on ```Run As``` -> ```Go Application```
 
-![Run Project](https://apidocs.io/illustration/go?step=runProject&projectName=bibcodequery_lib)
+![Run Project](https://apidocs.io/illustration/go?step=runProject&projectName=calculatorservice_lib)
 
 # Class Reference
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [bibcodequerybinding_pkg](#bibcodequerybinding_pkg)
+* [defaultbinding_icalculator_pkg](#defaultbinding_icalculator_pkg)
 
-## <a name="bibcodequerybinding_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".bibcodequerybinding_pkg") bibcodequerybinding_pkg
+## <a name="defaultbinding_icalculator_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".defaultbinding_icalculator_pkg") defaultbinding_icalculator_pkg
 
 ### Get instance
 
-Factory for the ``` BIBCODEQUERYBINDING ``` interface can be accessed from the package bibcodequerybinding_pkg.
+Factory for the ``` DEFAULTBINDING_ICALCULATOR ``` interface can be accessed from the package defaultbinding_icalculator_pkg.
 
 ```go
-bibcodeQueryBinding := bibcodequerybinding_pkg.NewBIBCODEQUERYBINDING()
+defaultBindingICalculator := defaultbinding_icalculator_pkg.NewDEFAULTBINDING_ICALCULATOR()
 ```
 
-### <a name="get_bibcode"></a>![Method: ](https://apidocs.io/img/method.png ".bibcodequerybinding_pkg.GetBibcode") GetBibcode
+### <a name="add"></a>![Method: ](https://apidocs.io/img/method.png ".defaultbinding_icalculator_pkg.Add") Add
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -121,30 +123,52 @@ bibcodeQueryBinding := bibcodequerybinding_pkg.NewBIBCODEQUERYBINDING()
 
 
 ```go
-func (me *BIBCODEQUERYBINDING_IMPL) GetBibcode(
-            bibcode string,
-            dbKey string,
-            dataType string)(*models_pkg.ReturnBibcode,error)
+func (me *DEFAULTBINDINGICALCULATOR_IMPL) Add(body *models_pkg.ICalculatorAddInputMessage)(*models_pkg.ICalculatorAddOutputMessage,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| bibcode |  ``` Required ```  | TODO: Add a parameter description |
-| dbKey |  ``` Required ```  | TODO: Add a parameter description |
-| dataType |  ``` Required ```  | TODO: Add a parameter description |
+| body |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
 
 ```go
-bibcode := "bibcode"
-dbKey := "db_key"
-dataType := "data_type"
+var body *models_pkg.ICalculatorAddInputMessage
 
-var result *models_pkg.ReturnBibcode
-result,_ = bibcodeQueryBinding.GetBibcode(bibcode, dbKey, dataType)
+var result *models_pkg.ICalculatorAddOutputMessage
+result,_ = defaultBindingICalculator.Add(body)
+
+```
+
+
+### <a name="create_subtract"></a>![Method: ](https://apidocs.io/img/method.png ".defaultbinding_icalculator_pkg.CreateSubtract") CreateSubtract
+
+> *Tags:*  ``` Skips Authentication ``` 
+
+> TODO: Add a method description
+
+
+```go
+func (me *DEFAULTBINDINGICALCULATOR_IMPL) CreateSubtract(body *models_pkg.ICalculatorSubtractInputMessage)(*models_pkg.ICalculatorSubtractOutputMessage,error)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| body |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```go
+var body *models_pkg.ICalculatorSubtractInputMessage
+
+var result *models_pkg.ICalculatorSubtractOutputMessage
+result,_ = defaultBindingICalculator.CreateSubtract(body)
 
 ```
 

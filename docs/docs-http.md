@@ -1,10 +1,12 @@
 # 
 
+this is one of the things we are working on it.
+
 
 
 ## Base URL
 
-The Base URL for this API is `http://adsabs.harvard.edu/`
+The Base URL for this API is `http://Example.org/ICalculator`
 
 
 
@@ -16,15 +18,15 @@ The Base URL for this API is `http://adsabs.harvard.edu/`
 
 # <a name="api_reference"></a>API Reference
 
-* [BibcodeQueryBinding](#bibcode_query_binding)
+* [DefaultBinding_ICalculator](#default_binding_i_calculator)
 
-## <a name="bibcode_query_binding"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "BibcodeQueryBinding") BibcodeQueryBinding
-
-
-### <a name="get_bibcode"></a>![Endpoint: ](https://apidocs.io/img/method.png "getBibcode") getBibcode
+## <a name="default_binding_i_calculator"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "DefaultBinding_ICalculator") DefaultBinding_ICalculator
 
 
-**`GET`** `/cgi-bin/nph-bib_query`
+### <a name="add"></a>![Endpoint: ](https://apidocs.io/img/method.png "Add") Add
+
+
+**`POST`** `/AdD`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -33,21 +35,84 @@ The Base URL for this API is `http://adsabs.harvard.edu/`
 
 
 
-#### Query Parameters
-| Parameter | Type | Tags | Description | Example |
-|-----------|------| ---- |-------------| -------------------------------- |
-| bibcode | [string](#api_types) |  ``` Required ```  | TODO: Add a parameter description | `"bibcode"` | 
-| db_key | [string](#api_types) |  ``` Required ```  | TODO: Add a parameter description | `"db_key"` | 
-| data_type | [string](#api_types) |  ``` Required ```  | TODO: Add a parameter description | `"data_type"` | 
+#### Request Headers
+>Accept=application/json;
+>Content-Type=application/json;
+
+#### Request Body
+Raw 
+
+|  Type | Tags | Description |
+| ------| ---- |-------------| 
+| [ICalculator_Add_InputMessage](#i_calculator_add_input_message) |  ``` Required ```  | TODO: Add description | 
+
+ Example 
+``` 
+{
+  "parameters": {
+    "a": 40,
+    "b": 40
+  }
+}
+``` 
 
 #### Responses
 **200** 
 
 
-Body ([returnBibcode](#return_bibcode)) 
+Body ([ICalculator_Add_OutputMessage](#i_calculator_add_output_message)) 
 ```
 {
-  "body": "body"
+  "parameters": {
+    "result": 253
+  }
+}
+```
+
+
+### <a name="subtract"></a>![Endpoint: ](https://apidocs.io/img/method.png "Subtract") Subtract
+
+
+**`POST`** `/Subtract`
+
+> *Tags:*  ``` Skips Authentication ``` 
+
+> TODO: Add a method description
+
+
+
+
+#### Request Headers
+>Accept=application/json;
+>Content-Type=application/json;
+
+#### Request Body
+Raw 
+
+|  Type | Tags | Description |
+| ------| ---- |-------------| 
+| [ICalculator_Subtract_InputMessage](#i_calculator_subtract_input_message) |  ``` Required ```  | TODO: Add description | 
+
+ Example 
+``` 
+{
+  "parameters": {
+    "a": 253,
+    "b": 253
+  }
+}
+``` 
+
+#### Responses
+**200** 
+
+
+Body ([ICalculator_Subtract_OutputMessage](#i_calculator_subtract_output_message)) 
+```
+{
+  "parameters": {
+    "result": 253
+  }
 }
 ```
 
@@ -75,7 +140,7 @@ This section provides details on the available types. The primitive types availa
 
 
 In addition to the above types, the following complex types are also available:
-### <a name="return_bibcode"></a>![Model: ](https://apidocs.io/img/method.png "returnBibcode") returnBibcode
+### <a name="add"></a>![Model: ](https://apidocs.io/img/method.png "Add") Add
 
 
 
@@ -86,5 +151,119 @@ In addition to the above types, the following complex types are also available:
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| body | [string](#api_types) |  ``` Required ```  | TODO: Add a property description |
+| a | [number](#api_types) |  ``` Optional ```  | TODO: Add a property description | 
+| b | [number](#api_types) |  ``` Optional ```  | TODO: Add a property description | 
+
+
+
+
+### <a name="add_response"></a>![Model: ](https://apidocs.io/img/method.png "AddResponse") AddResponse
+
+
+
+> TODO: Add a method description
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| result | [number](#api_types) |  ``` Optional ```  | TODO: Add a property description | 
+
+
+
+
+### <a name="subtract"></a>![Model: ](https://apidocs.io/img/method.png "Subtract") Subtract
+
+
+
+> TODO: Add a method description
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| a | [number](#api_types) |  ``` Optional ```  | TODO: Add a property description | 
+| b | [number](#api_types) |  ``` Optional ```  | TODO: Add a property description | 
+
+
+
+
+### <a name="subtract_response"></a>![Model: ](https://apidocs.io/img/method.png "SubtractResponse") SubtractResponse
+
+
+
+> TODO: Add a method description
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| result | [number](#api_types) |  ``` Optional ```  | TODO: Add a property description | 
+
+
+
+
+### <a name="i_calculator_add_output_message"></a>![Model: ](https://apidocs.io/img/method.png "ICalculator_Add_OutputMessage") ICalculator_Add_OutputMessage
+
+
+
+> TODO: Add a method description
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| parameters | [AddResponse](#add_response) |  ``` Required ```  | TODO: Add a property description | 
+
+
+
+
+### <a name="i_calculator_subtract_output_message"></a>![Model: ](https://apidocs.io/img/method.png "ICalculator_Subtract_OutputMessage") ICalculator_Subtract_OutputMessage
+
+
+
+> TODO: Add a method description
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| parameters | [SubtractResponse](#subtract_response) |  ``` Required ```  | TODO: Add a property description | 
+
+
+
+
+### <a name="i_calculator_add_input_message"></a>![Model: ](https://apidocs.io/img/method.png "ICalculator_Add_InputMessage") ICalculator_Add_InputMessage
+
+
+
+> TODO: Add a method description
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| parameters | [Add](#add) |  ``` Required ```  | TODO: Add a property description | 
+
+
+
+
+### <a name="i_calculator_subtract_input_message"></a>![Model: ](https://apidocs.io/img/method.png "ICalculator_Subtract_InputMessage") ICalculator_Subtract_InputMessage
+
+
+
+> TODO: Add a method description
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| parameters | [Subtract](#subtract) |  ``` Required ```  | TODO: Add a property description |
 
